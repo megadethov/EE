@@ -9,4 +9,4 @@ atlassian-ide-plugin.xml
 file_storage
 *.uml
 nbproject
-/lesson_13_ServletParametrs/build/
+build
