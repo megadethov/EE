@@ -22,8 +22,8 @@ import javax.servlet.http.HttpSession;
  * @author mega
  */
 public class CalcServlet extends HttpServlet {
-
-    private List<String> listOperations = new ArrayList<>(); // поле класса не потокобезопасно
+    
+//    private List<String> listOperations = new ArrayList<>(); // поле класса не потокобезопасно
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -62,14 +62,15 @@ public class CalcServlet extends HttpServlet {
 
                 // калькуляция
                 double result = calcResult(operType, one, two);
-
+                List<String> listOperations;
+                
                 // для новой сессии создаем новый список
                 if (session.isNew()) {
-                    listOperations.clear();
+                    listOperations = new ArrayList<>();
                 }
-//                else { // иначе получаем список из атрибутов сессии
-//                    listOperations = (List<String>) session.getAttribute("formula");
-//                }
+                else { // иначе получаем список из атрибутов сессии
+                    listOperations = (List<String>) session.getAttribute("formula");
+                }
 
                 // добавление новой операции в список и атрибут сессии
                 listOperations.add(one + " " + operType.getStringValue() + " " + two + " = " + result);
@@ -96,7 +97,7 @@ public class CalcServlet extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
             out.close();
-        }        
+        }  
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -137,7 +138,7 @@ public class CalcServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
+    
 // калькуляция
     private double calcResult(OperationType operType, double one, double two) {
         double result = 0;
