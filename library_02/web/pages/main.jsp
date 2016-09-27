@@ -4,6 +4,7 @@
     Author     : mega
 --%>
 
+<%@page import="testjdbc.TestConnection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,8 +15,13 @@
     <body>
         <% request.setCharacterEncoding("UTF-8"); %>
         <%= "Привет"%>
-       <h3> <%= request.getParameter("username")%> </h3>
-       
+       <h3> <%= request.getParameter("username")%> </h3>       
        ${param ["password"]}
+       
+       <%
+       TestConnection tc = new TestConnection();
+       tc.check();
+       
+       %>
     </body>
 </html>

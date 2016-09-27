@@ -10,3 +10,4 @@ file_storage
 *.uml
 nbproject
 build
+/library_02/dist/
