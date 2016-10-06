@@ -3,3 +3,8 @@ PostgresSQL
 postgres
 postgres
 port 5432
+
+WildFly
+-------
+mega
+mega_dethov33
