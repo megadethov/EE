@@ -1,0 +1,4 @@
+2016-10-07 17:48:45 INFO  App - info message
+2016-10-07 17:48:45 WARN  App - warn message
+2016-10-07 17:48:45 ERROR App - error message
+2016-10-07 17:48:45 FATAL App - fatal message
