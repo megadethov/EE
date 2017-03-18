@@ -1,3 +1,0 @@
-<jboss-web>
-    <security-domain>client_cert_domain</security-domain>
-</jboss-web>

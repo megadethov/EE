@@ -1,7 +1,0 @@
-MySQL
-root
-toor
-
-GlassFish
-admin
-admin
