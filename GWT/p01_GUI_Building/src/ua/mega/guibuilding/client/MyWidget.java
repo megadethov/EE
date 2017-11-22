@@ -34,5 +34,8 @@ public class MyWidget extends Composite {
         hPanel.add(tBox);
         hPanel.add(btn);
         vPanel.add(hPanel);
+
+        MyFlexTableWidget fTable = new MyFlexTableWidget();
+        vPanel.add(fTable);
     }
 }
