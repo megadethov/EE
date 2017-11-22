@@ -26,6 +26,14 @@ public class GuiBuilding implements EntryPoint {
         HorizontalPanel hPanel = new HorizontalPanel();
         hPanel.setBorderWidth(3);
 
+        btn.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                String text = tBox.getText();
+                label.setText(text);
+            }
+        });
+
         vPanel.add(img);
         vPanel.add(label);
 
