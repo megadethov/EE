@@ -15,32 +15,9 @@ public class GuiBuilding implements EntryPoint {
      * This is the entry point method.
      */
     public void onModuleLoad() {
-        VerticalPanel vPanel = new VerticalPanel();
-        vPanel.setBorderWidth(1);
 
-        Label label = new Label("Label text !!!");
-        Button btn = new Button("click me");
-        Image img = new Image("img/1030 - Struts validator.png");
-        TextBox tBox = new TextBox();
+        MyWidget myWidget = new MyWidget();
 
-        HorizontalPanel hPanel = new HorizontalPanel();
-        hPanel.setBorderWidth(3);
-
-        btn.addClickHandler(new ClickHandler() {
-            @Override
-            public void onClick(ClickEvent event) {
-                String text = tBox.getText();
-                label.setText(text);
-            }
-        });
-
-        vPanel.add(img);
-        vPanel.add(label);
-
-        hPanel.add(tBox);
-        hPanel.add(btn);
-        vPanel.add(hPanel);
-
-        RootPanel.get().add(vPanel);
+        RootPanel.get().add(myWidget);
     }
 }
