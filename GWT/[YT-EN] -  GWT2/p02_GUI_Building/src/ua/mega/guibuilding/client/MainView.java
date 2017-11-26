@@ -1,6 +1,7 @@
 package ua.mega.guibuilding.client;
 
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class MainView extends Composite {
@@ -15,7 +16,20 @@ public class MainView extends Composite {
         this.vPanel.add(menu);
 
         this.contentPanel = new VerticalPanel();
-
         this.vPanel.add(contentPanel);
+
+        Label textLbl = new Label("Press button to see landscape");
+        this.vPanel.add(textLbl);
+    }
+
+    public void openLandscape1() {
+        this.contentPanel.clear(); //  очистить панель от предыдущего вида
+        LandscapeOne page1 = new LandscapeOne();
+        this.contentPanel.add(page1);
+    }
+    public void openLandscape2() {
+        this.contentPanel.clear(); //  очистить панель от предыдущего вида
+        LandscapeTwo page2 = new LandscapeTwo();
+        this.contentPanel.add(page2);
     }
 }
