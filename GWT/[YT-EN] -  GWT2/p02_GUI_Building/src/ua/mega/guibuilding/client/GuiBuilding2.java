@@ -15,7 +15,7 @@ public class GuiBuilding2 implements EntryPoint {
      * This is the entry point method.
      */
     public void onModuleLoad() {
-        Label label = new Label("Hello from GWT !!!");
-        RootPanel.get().add(label);
+        MainView mainView = new MainView();
+        RootPanel.get().add(mainView);
     }
 }
