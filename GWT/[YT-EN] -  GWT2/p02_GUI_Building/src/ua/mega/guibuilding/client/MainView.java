@@ -12,7 +12,7 @@ public class MainView extends Composite {
         initWidget(this.vPanel);
         this.vPanel.setBorderWidth(1);
 
-        MenuView menu = new MenuView();
+        MenuView menu = new MenuView(this);
         this.vPanel.add(menu);
 
         this.contentPanel = new VerticalPanel();

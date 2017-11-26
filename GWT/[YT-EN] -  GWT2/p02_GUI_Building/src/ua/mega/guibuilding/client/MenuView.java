@@ -6,17 +6,19 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 
-public class MenuView extends Composite{
-    HorizontalPanel hPanel = new HorizontalPanel();
+public class MenuView extends Composite {
+    private HorizontalPanel hPanel = new HorizontalPanel();
+    private MainView main;
 
-    public MenuView() {
+    public MenuView(MainView main) {
         initWidget(hPanel);
+        this.main = main;
 
         Button landscapeBtn1 = new Button("Landscape 1");
         landscapeBtn1.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
-
+                main.openLandscape1();
             }
         });
         this.hPanel.add(landscapeBtn1);
@@ -25,7 +27,7 @@ public class MenuView extends Composite{
         landscapeBtn2.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
-
+                main.openLandscape2();
             }
         });
         this.hPanel.add(landscapeBtn2);
