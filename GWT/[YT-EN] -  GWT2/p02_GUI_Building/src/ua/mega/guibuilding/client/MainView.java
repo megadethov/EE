@@ -9,6 +9,10 @@ public class MainView extends Composite {
 
     public MainView() {
         initWidget(this.vPanel);
+
+        MenuView menu = new MenuView();
+        this.vPanel.add(menu);
+
         this.contentPanel = new VerticalPanel();
 
         this.vPanel.add(contentPanel);
